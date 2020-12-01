@@ -1,1 +1,0 @@
-# kabra_logistic_react_js

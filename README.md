@@ -13,6 +13,7 @@
 
 ### Steps to run the project:- 
 1) git clone https://github.com/pawankumarsoni/kabra_logistic_react_js.git
-2) npm install 
-3) npm run start
-4) now open google chrome and run http://localhost:8080/products
+2) cd kabra_logistic_react_js/
+3) npm install 
+4) npm run start
+5) now open google chrome and run http://localhost:8080/products

@@ -1,0 +1,113 @@
+.checked {
+    color: orange;
+}
+.product-box {
+    text-align: left;
+    position: relative;
+    .img-wrapper {
+        position: relative;
+    }
+    .product-name {
+        line-height: 1;
+        transition: all .5s ease;
+        font-size: 16px;
+        color: #777;
+    }
+    a {
+        text-decoration: none !important;
+    }
+    .product-price {
+        font-size: 24px;
+        margin-top: 10px;
+    }
+    .rating {
+        width: 50%;
+    }
+}
+.product-box .cart-info.cart-wrap,
+.product-box .cart-wrap.cart-wrap,
+.product-wrap .cart-info.cart-wrap,
+.product-wrap .cart-wrap.cart-wrap {
+    float: right;
+    position: relative;
+    right: 0;
+    width: 50%;
+}
+.product-box .cart-info button,
+.product-box .cart-wrap button,
+.product-wrap .cart-info button,
+.product-wrap .cart-wrap button {
+    background: none;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+}
+.product-box:hover .cart-wrap button,
+.product-wrap:hover .cart-wrap button {
+    -webkit-animation: fadeInRight 0.3s ease-in-out;
+    animation: fadeInRight 0.3s ease-in-out;
+}
+
+.product-box .cart-info.cart-wrap,
+.product-box .cart-wrap.cart-wrap,
+.product-wrap .cart-info.cart-wrap,
+.product-wrap .cart-wrap.cart-wrap {
+    bottom: 0;
+    text-align: right;
+    left: unset;
+}
+.product-bg-img {
+    width: 100%;
+    height: 300px;
+    background-position: center center;
+    // background-repeat: no-repeat;
+}
+.rating-cart {
+    position: relative;
+    display: inline-flex;
+    left: 0;
+    margin: 10px 0 10px 0;
+    width: 100%;
+}
+.product-min-desc{
+    margin: 10px 10px 30px 10px;
+}
+.single-product-detail {
+    .qty-box {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .qty-box .input-group {
+        justify-content: unset;
+        width: unset;
+    }
+    .qty-box .input-group span button {
+        background: #fff!important;
+        border: 1px solid #ced4da;
+    }
+    .qty-box .input-group button i {
+        font-weight: 900;
+        color: #222;
+    }
+    .qty-box .input-group .form-control {
+        text-align: center;
+        width: 80px;
+        flex: unset;
+    }
+}
+.product-title {
+    color: #222;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.product-q {
+    margin: 10px 0 10px 0;
+}
+@media (max-width: 576px) { 
+    .product-single-price {
+        margin-top: 20px;
+    }
+}

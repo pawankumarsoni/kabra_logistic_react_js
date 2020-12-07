@@ -1,0 +1,108 @@
+.p-0 {
+    padding: 0px;
+}
+
+.m-b-30 {
+    margin-bottom: 30px;
+}
+
+.m-20 {
+    margin: 20px;
+}
+
+.m-t-25 {
+    margin-top: 25px;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.btn-solid {
+    padding: 7px 25px;
+    color: #fff !important;
+    letter-spacing: 0.05em;
+    border: 2px solid #ff4c3b;
+    background-image: linear-gradient(30deg, #ff4c3b 50%, transparent 0);
+    background-size: 540px;
+    background-repeat: no-repeat;
+    background-position: 0;
+    transition: background 0.3s ease-in-out;
+}
+
+.m-tb-20 {
+    margin: 15px 0 15px 0;
+}
+
+.m-t-20 {
+    margin-top: 20px;
+}
+
+/* Tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    padding: 1px;
+}
+
+.width-70 {
+    width: 70%;
+}
+
+@media (max-width: 576px) {
+    .width-70 {
+        width: 80%;
+    }
+    .hide-xs {
+        display: none;
+    }
+}
+
+.delete-item {
+    color: red;
+    font-size: 20px;
+}
+
+.kabra-logistic-header {
+    background: red;
+    min-height: 50px;
+    overflow: auto;
+    color: black;
+    li {
+        list-style: none;
+    }
+    .menu-left {
+        width: 50%;
+        float: left;
+        padding-top: 15px;
+    }
+    .icon-nav {
+        width: 50%;
+        padding-top: 15px;
+    }
+    a {
+        color: black;
+    }
+    @media (max-width: 576px) {
+        width: 97vh;
+    }
+}

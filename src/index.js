@@ -2,42 +2,48 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from "react-redux";
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { store } from "./helpers"
-import './index.css';
+import { PersistGate } from 'redux-persist/integration/react';
 import reportWebVitals from './reportWebVitals';
+import './index.scss';
+
+import { store, persistor } from "./helpers"
 
 // Product Pages
-import ProductList from './containers/Product';
-import ProductDetail from './containers/Product/product';
+import ProductList from './containers/product';
+import ProductDetail from './containers/product/product';
 
 // Cart Page
-import Cart from './containers/Cart';
+import Cart from './containers/cart';
 
 // Error 404 Page
 import PageNotFound from './containers/404';
 
+// get all product list
+import { getProductList } from './redux/actions/product';
 
-class Root extends React.Component {
+
+class Root extends React.PureComponent {
     render() {
+        store.dispatch(getProductList())
         return (
             <Provider store={store}>
-                <BrowserRouter basename={'/'} >
-                    <Switch>
-                        <Route exact path="/products" component={ProductList} />
-                        <Route exact path={`/products/:id`} component={ProductDetail} />
-                        <Route exact path="/view-cart" component={Cart} />
-                        <Route path="*" component={PageNotFound} />
-                    </Switch>
-                </BrowserRouter>
+                <PersistGate loading={null} persistor={persistor}>
+                    <BrowserRouter>
+                        <Switch>
+                            <Route exact path="/products" component={ProductList} />
+                            <Route path="/products/:id" component={ProductDetail} />
+                            <Route exact path="/view-cart" component={Cart} />
+                            <Route path="*" component={PageNotFound} />
+                        </Switch>
+                    </BrowserRouter >
+                </PersistGate>
             </Provider>
         )
     }
 }
 
 ReactDOM.render(
-    <React.StrictMode>
-        <Root />
-    </React.StrictMode>,
+    <Root />,
     document.getElementById('root')
 );
 

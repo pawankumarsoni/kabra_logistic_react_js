@@ -1,0 +1,29 @@
+.product_title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 2.5rem 0 2.5rem 0;
+}
+
+i.fa.fa-shopping-cart:focus {
+    outline: none !important;
+}
+
+.add-to-cart:focus {
+    outline: none !important;
+}
+
+.qty-box {
+    justify-content: center;
+    display: flex;
+    .quantity-right-plus{
+        border-left-style: none !important;
+    }
+    .quantity-left-minus {
+        border-radius: 0;
+    }
+}
+
+.qty-box .input-group span button {
+    background: #fff!important;
+    border: 1px solid #ced4da;
+}

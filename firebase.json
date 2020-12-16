@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "public/calander-post",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",

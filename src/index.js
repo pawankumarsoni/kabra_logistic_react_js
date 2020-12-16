@@ -32,7 +32,7 @@ class Root extends React.PureComponent {
                         <Switch>
                             <Route exact path="/products" component={ProductList} />
                             <Route path="/products/:id" component={ProductDetail} />
-                            <Route exact path="/view-cart" component={Cart} />
+                            <Route exact path="/calander" component={PageNotFound} />
                             <Route path="*" component={PageNotFound} />
                         </Switch>
                     </BrowserRouter >
